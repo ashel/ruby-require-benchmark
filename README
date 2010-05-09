@@ -1,3 +1,8 @@
 These programs are benchmark programs for require.
 
+to run benchmarks,
+
+% ruby create_testdata.rb
+% ruby run_benchmarks.rb
+
 distributed with MIT license.
