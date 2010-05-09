@@ -1,0 +1,19 @@
+class Test<%= index %>
+% 10.times do |i|
+	CONSTANT_<%= i %> = "<%= i %>"
+% end
+
+	def initialize
+% 10.times do |i|
+		@val<%= i %> = "<%= i %>"
+% end
+	end
+% 10.times do |i|
+
+	def method_<%= i %>
+% 10.times do |k|
+		@val<%= k %> = "<%= k %>"
+% end
+	end
+% end
+end
