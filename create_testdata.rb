@@ -34,3 +34,14 @@ File.open(dir + "/test.rb", "w") do |file|
 		file.write(data_class_erb.result(binding))
 	end
 end
+
+dir = "data_file_exist"
+FileUtils.rm_rf(dir)
+
+100.times do |index|
+	FileUtils.mkdir_p(dir + "/test#{index}");
+	File.open(dir + "/test#{index}/test#{index}.rb", "w") do |file|
+		file.puts("# -*- coding: utf-8 -*-")
+		file.write(data_class_erb.result(binding))
+	end
+end

@@ -12,6 +12,7 @@ end
 if RUBY_VERSION < "1.9.0"
 	# 1.8系では実行できないベンチマークを除く
 	benchmarks.delete("benchmark_compile_class_onefile.rb")
+	benchmarks.delete("benchmark_read_class_onefile_windows31j.rb")
 end
 
 name_max = benchmarks.map{|item| item.length}.max - 13

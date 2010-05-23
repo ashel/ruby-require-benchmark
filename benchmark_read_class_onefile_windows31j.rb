@@ -5,7 +5,5 @@ require 'benchmark'
 str = nil
 
 puts Benchmark.measure {
-	100.times do |i|
-		str = File.read("data_class/test#{i}.rb")
-	end
+	str = File.read("data_class_onefile/test.rb", {encoding: "Windows-31J"})
 }
